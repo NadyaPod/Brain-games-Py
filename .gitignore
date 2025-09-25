@@ -2,3 +2,4 @@
 __pycache__
 .python-version
 brain_games/scripts/tg_bot.py
+Makefile
