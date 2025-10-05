@@ -1,6 +1,5 @@
 import prompt
-from brain_games.cli import welcome_user
-from brain_games.scripts.common import win, lose, generate_random_integer
+from brain_games.scripts.common import generate_random_integer, play_game
 
 
 def is_even(num):
@@ -10,7 +9,7 @@ def is_even(num):
         return "no"
 
 
-def single_game():
+def single_game_even(*_):
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     number_to_check = generate_random_integer()
@@ -20,26 +19,7 @@ def single_game():
     return (user_answer, right_answer)
 
 
-def play_game():
-    player_name = welcome_user()
-
-    for i in range(3):
-        user_answer, right_answer = single_game()
-
-        if user_answer == right_answer:
-            print("Correct!")
-        else:
-            lose(user_answer, right_answer, player_name)
-            return
-
-        win(player_name)
-
-
 def main():
     # run_tg_bot()
     print("Welcome to the Brain Even!")
-    play_game()
-
-
-if __name__ == "__main__":
-    main()
+    play_game(3, single_game_even)

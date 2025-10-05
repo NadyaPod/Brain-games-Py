@@ -6,7 +6,3 @@ def main():
     # run_tg_bot()
     print("Welcome to the Brain Games!")
     welcome_user()
-
-
-if __name__ == "__main__":
-    main()

@@ -4,3 +4,4 @@ __pycache__
 brain_games/scripts/tg_bot.py
 Makefile
 .pre-commit-config.yaml
+pyrightconfig.json
