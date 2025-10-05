@@ -20,7 +20,7 @@ def single_game_progression(first_number, *_):
 
     user_answer = prompt.string(f"Question: {' '.join(progression)}\n")
 
-    return (int(user_answer), right_answer)
+    return (user_answer, right_answer)
 
 
 def main():
