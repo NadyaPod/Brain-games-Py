@@ -2,7 +2,11 @@ import prompt
 from brain_games.scripts.common import play_game
 
 
-def single_game_gcd(first_number: int, second_number: int, *_) -> tuple[int, int]:
+def single_game_gcd(
+    first_number: int,
+    second_number: int,
+    *_,
+) -> tuple[int, int]:
     print("Find the greatest common divisor of given numbers.")
     user_answer = prompt.string(f"Question: {first_number} {second_number}\n")
 

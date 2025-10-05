@@ -8,7 +8,11 @@ def win(player_name: str) -> None:
     print(f"Congratulations, {player_name}!")
 
 
-def lose(user_answer: str | int, right_answer: str | int, player_name: str) -> None:
+def lose(
+    user_answer: str | int,
+    right_answer: str | int,
+    player_name: str,
+) -> None:
     print(
         f"'{user_answer}' is wrong answer ;(. "
         f"Correct answer was '{right_answer}'.\n"
