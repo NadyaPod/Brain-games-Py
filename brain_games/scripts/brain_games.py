@@ -1,8 +1,6 @@
-# from brain_games.scripts.tg_bot import run_tg_bot
 from brain_games.cli import welcome_user
 
 
-def main():
-    # run_tg_bot()
+def main() -> None:
     print("Welcome to the Brain Games!")
     welcome_user()

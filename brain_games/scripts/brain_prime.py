@@ -1,8 +1,8 @@
 import prompt
-from brain_games.scripts.common import play_game, generate_random_integer
+from brain_games.scripts.common import play_game
 
 
-def is_prime(number):
+def is_prime(number: int) -> str:
     if number <= 1:
         return "no"
     if number == 2:
@@ -15,17 +15,18 @@ def is_prime(number):
     return "yes"
 
 
-def single_game_prime(first_number, second_number, *_):
+def single_game_prime(number_to_check: int, *_) -> tuple[str, str]:
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
-    number_to_check = generate_random_integer()
     right_answer = is_prime(number_to_check)
     user_answer = prompt.string(f"Question: {number_to_check}\n")
+
+    if not isinstance(user_answer, str):
+        raise ValueError()
 
     return (user_answer, right_answer)
 
 
-def main():
-    # run_tg_bot()
+def main() -> None:
     print("Welcome to the Brain Prime!")
     play_game(3, single_game_prime)

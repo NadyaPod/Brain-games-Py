@@ -2,7 +2,7 @@ import prompt
 from brain_games.scripts.common import play_game, generate_random_integer_range
 
 
-def single_game_progression(first_number, *_):
+def single_game_progression(first_number: int, *_) -> tuple[str, str]:
     print("What number is missing in the progression?")
 
     step = generate_random_integer_range(1, 10)
@@ -20,10 +20,12 @@ def single_game_progression(first_number, *_):
 
     user_answer = prompt.string(f"Question: {' '.join(progression)}\n")
 
+    if not isinstance(user_answer, str):
+        raise ValueError()
+
     return (user_answer, right_answer)
 
 
-def main():
-    # run_tg_bot()
+def main() -> None:
     print("Welcome to the Brain Progression!")
     play_game(3, single_game_progression)
