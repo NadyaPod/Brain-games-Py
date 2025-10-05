@@ -9,7 +9,9 @@ def win(player_name):
 
 def lose(user_answer, right_answer, player_name):
     print(
-        f"""'{user_answer}' is wrong answer ;(. Correct answer was '{right_answer}'.\nLet's try again, {player_name}!"""
+        f"'{user_answer}' is wrong answer ;(. "
+        f"Correct answer was '{right_answer}'.\n"
+        f"Let's try again, {player_name}!",
     )
 
 
