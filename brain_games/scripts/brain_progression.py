@@ -12,13 +12,13 @@ def single_game_progression(first_number, *_):
     progression = []
 
     for i in range(0, progression_len * step, step):
-        progression.append(progression_start + i)
+        progression.append(str(progression_start + i))
 
     index_to_hide = generate_random_integer_range(0, progression_len - 1)
     right_answer = progression[index_to_hide]
-    progression[index_to_hide] = "***"
+    progression[index_to_hide] = ".."
 
-    user_answer = prompt.string(f"Question: {progression}\n")
+    user_answer = prompt.string(f"Question: {' '.join(progression)}\n")
 
     return (int(user_answer), right_answer)
 
